@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compétences - Lucas Chayann</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-light">
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Chayann Lucas</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Basculer la navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="parcours.html">Parcours</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="certification.html">Certifications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="competences.html">Compétences</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projets.html">Projets</a>
+          </li>
+          <li class="nav-item ms-2 ms-lg-4">
+            <a class="btn btn-doc" href="Documentation/Doc.html">Docs</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  
+<div class="section-title">EXPÉRIENCES SCOLAIRES</div>
+
+<div>
+  <div class="formation">
+    <div class="formation-image">
+      <img src="https://clucasit.wordpress.com/wp-content/uploads/2025/06/slide01-3.webp" alt="Lycée Félix Le Dantec">
+      <div class="image-date">2024 - 2026</div>
+    </div>
+    <div class="formation-text">
+      <h2>Lycée Félix Le Dantec</h2>
+      <p>Brevet de Technicien Supérieur Services Informatiques aux Organisations, Option A Solutions d'Infrastructure, Systèmes et Réseaux, en cours d'obtention</p>
+      <p><strong>en cours de formation</strong></p>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="formation">
+    <div class="formation-image">
+      <img src="https://clucasit.wordpress.com/wp-content/uploads/2025/06/ill_lycee_saint-brieuc.jpg?w=300" alt="Lycée Sacré Coeur">
+      <div class="image-date">2021 - 2024</div>
+    </div>
+    <div class="formation-text">
+      <h2>Lycée Sacré Coeur</h2>
+      <p>Baccalauréat Professionnel Systèmes Numériques, Option C (Réseaux Informatiques &amp; Systèmes Communicants)</p>
+      <p><strong>Mention Bien</strong></p>
+    </div>
+  </div>
+</div>
+
+<div class="section-title">EXPÉRIENCES PROFESSIONNELLES</div>
+
+<div>
+  <div class="formation">
+    <div class="formation-image">
+      <img src="https://clucasit.wordpress.com/wp-content/uploads/2025/06/hutchinson-logo.png" alt="Joint - Francais (Hutchinson)">
+      <div class="image-date">
+        <div>2024</div>
+        <div>2025</div>
+      </div>
+    </div>
+    <div class="formation-text">
+      <h2>Joint - Francais (Hutchinson)</h2>
+      <p>Stagiaire en administration système et réseau au sein de l'entreprise Hutchinson à Saint-Brieuc</p>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPage = window.location.pathname.split("/").pop();
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    navLinks.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+  });
+</script>
+</div>
+
+ <footer class="bg-white text-center py-3">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Lucas Chayann. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

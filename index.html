@@ -1,1 +1,75 @@
-<h1>COUCOU!!!</h1>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>À propos - Chayann Lucas</title>
+
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="index-page">
+
+ 
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Chayann Lucas</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Basculer la navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="parcours.html">Parcours</a></li>
+          <li class="nav-item"><a class="nav-link" href="certification.html">Certifications</a></li>
+          <li class="nav-item"><a class="nav-link" href="competences.html">Compétences</a></li>
+          <li class="nav-item"><a class="nav-link" href="projets.html">Projets</a></li>
+          <li class="nav-item ms-2 ms-lg-4"><a class="btn btn-doc" href="Documentation/Doc.html">Docs</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+  <section class="container text-center">
+    <img src="https://clucasit.wordpress.com/wp-content/uploads/2025/06/student-8732859_1280-removebg-preview-1.png" 
+     alt="Portrait Chayann" 
+     class="img-fluid rounded-circle portrait-hover" />
+
+    <h1>À propos de moi</h1>
+    <p>👋 Bonjour, je m'appelle <strong> Chayann LUCAS </strong> et je vous souhaite la bienvenue sur mon portfolio personnel.</p>
+    <p>🎓 Actuellement étudiant en <strong>BTS SIO option SISR</strong> au lycée <a href="https://lycee-ledantec.fr/">Félix LE DANTEC</a> à Lannion, je me passionne pour les <strong>systèmes</strong>, <strong>réseaux</strong> et <strong>infrastructures informatiques</strong>.</p>
+    <p>📌 Ce site regroupe mon <strong>parcours</strong>, mes <strong>certifications</strong> et différents <strong>projets informatiques</strong> que j’ai réalisés. Mon objectif : apprendre en continu et progresser dans un domaine qui me motive chaque jour 💻<a href="https://www.toutatice.fr/portail" class="easter-egg" title="🤫">✨</a></p>
+  </section>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPage = window.location.pathname.split("/").pop();
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    navLinks.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+  });
+</script>
+
+ <footer class="bg-white text-center py-3">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Lucas Chayann. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+
+</body>
+</html>
