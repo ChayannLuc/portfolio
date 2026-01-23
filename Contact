@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Lucas Chayann</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-light">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Chayann Lucas</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="parcours.html">Parcours</a></li>
+          <li class="nav-item"><a class="nav-link" href="certification.html">Certifications</a></li>
+          <li class="nav-item"><a class="nav-link" href="competences.html">Compétences</a></li>
+          <li class="nav-item"><a class="nav-link" href="stages.html">Stages</a></li>
+          <li class="nav-item"><a class="nav-link" href="projets.html">Projets</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-2 ms-lg-4"><a class="btn btn-doc" href="Doc.html">Docs</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- TITRE -->
+  <div class="section-title">CONTACT</div>
+
+  <!-- CONTENU -->
+  <section class="container py-5">
+
+    <h1 class="mb-4 text-left">Me Contacter</h1>
+
+    <div class="competence-card mb-5">
+      <h2>Informations</h2>
+      <p><strong>Email :</strong> exemple@mail.com</p>
+      <p><strong>Téléphone :</strong> 06 00 00 00 00</p>
+      <p><strong>Localisation :</strong> Saint-Brieuc, Bretagne</p>
+    </div>
+
+    <div class="competence-card mb-5">
+      <h2>Réseaux</h2>
+      <p><strong>LinkedIn :</strong> lien à ajouter</p>
+      <p><strong>GitHub :</strong> lien à ajouter</p>
+      <p><strong>Portfolio :</strong> lien à ajouter</p>
+    </div>
+
+    <div class="competence-card">
+      <h2>Formulaire de Contact</h2>
+      <form>
+        <div class="mb-3">
+          <label class="form-label">Nom</label>
+          <input type="text" class="form-control" placeholder="Votre nom">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" placeholder="Votre email">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Message</label>
+          <textarea class="form-control" rows="5" placeholder="Votre message"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-doc">Envoyer</button>
+      </form>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-white text-center py-3">
+    <div class="container">
+      <p class="mb-0">&copy; 2026 Lucas Chayann. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
