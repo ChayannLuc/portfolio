@@ -8,15 +8,17 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="bg-light">
 
+  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
     <div class="container">
       <a class="navbar-brand" href="index.html">Chayann Lucas</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Basculer la navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
@@ -27,94 +29,186 @@
           <li class="nav-item"><a class="nav-link" href="Veille.html">Veille</a></li>
           <li class="nav-item"><a class="nav-link" href="projets.html">Projets</a></li>
           <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
-           <li class="nav-item ms-2 ms-lg-4"><a class="btn btn-doc" href="Doc.html">Docs</a></li>
+          <li class="nav-item ms-2 ms-lg-4"><a class="btn btn-doc" href="Doc.html">Docs</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
+  <!-- CONTENU -->
   <section class="container py-5 mt-5">
     <h1 class="mb-5 text-left">Mes Compétences</h1>
 
+    <!-- CYBERSÉCURITÉ -->
     <div class="row align-items-start mb-5">
-      <div class="col-auto">
-        <div class="circle bg-primary"></div>
-      </div>
+      <div class="col-auto"><div class="circle bg-primary"></div></div>
       <div class="col">
         <div class="competence-card">
           <h2>Cybersécurité</h2>
           <ul>
-            <li>Utilisation de Kali Linux pour l’analyse de vulnérabilités</li>
-            <li>Exploitation de failles SQL avec SQLMap</li>
-            <li>Prise en main d’outils de sécurité : Burp Suite, John the Ripper, Metasploit, Nmap, wireshark</li>
-            <li>Mise en place de pots de miel pour la détection d’intrusions</li>
-            <li>Installation et configuration de pare-feux PfSense, OPNsense, Stormshields</li>
+            <li>Analyse de vulnérabilités (Kali Linux)</li>
+            <li>Exploitation de failles (SQLMap, Burp Suite, Metasploit)</li>
+            <li>Analyse réseau : Wireshark, Nmap</li>
+            <li>Mise en place de honeypots</li>
+            <li>Configuration de pare-feux : PfSense, OPNsense, Stormshield</li>
+            <li>Authentification AD, VLAN, ACL, DMZ</li>
+            <li>VPN, certificats, HTTPS, SSH</li>
+            <li>Protection des données et sécurité des accès</li>
           </ul>
         </div>
       </div>
     </div>
 
-    
+    <!-- RÉSEAUX -->
     <div class="row align-items-start mb-5">
-      <div class="col-auto">
-        <div class="circle bg-success"></div>
-      </div>
+      <div class="col-auto"><div class="circle bg-success"></div></div>
       <div class="col">
         <div class="competence-card">
           <h2>Réseaux</h2>
           <ul>
-            <li>Conception de schémas réseau Cisco</li>
-            <li>Configuration de switchs et routeurs Cisco</li>
-            <li>Mise en place et gestion de serveurs Asterisk (téléphonie IP)</li>
-            <li>Installation et configuration de serveurs Samba pour le partage de fichiers</li>
-            <li>Implémentation de ferme RDS (Remote Desktop Services)</li>
+            <li>Conception de schémas réseau (Cisco, PacketTracer)</li>
+            <li>Configuration de switchs et routeurs (VLAN, STP, RIP, inter-VLAN)</li>
+            <li>Administration de réseaux WiFi (VLAN, pont WiFi)</li>
+            <li>Analyse de trames réseau (Wireshark)</li>
+            <li>Serveurs Asterisk (téléphonie IP)</li>
+            <li>Serveurs Samba (partage de fichiers)</li>
+            <li>Ferme RDS (Remote Desktop Services)</li>
           </ul>
         </div>
       </div>
     </div>
 
-   
+    <!-- SYSTÈMES & SERVICES -->
     <div class="row align-items-start mb-5">
-      <div class="col-auto">
-        <div class="circle bg-danger"></div>
-      </div>
+      <div class="col-auto"><div class="circle bg-danger"></div></div>
       <div class="col">
         <div class="competence-card">
-          <h2>Systèmes</h2>
+          <h2>Systèmes & Services</h2>
           <ul>
-            <li>Installation, configuration et administration de systèmes Linux (Debian, Ubuntu)</li>
-            <li>Installation et administration de Windows Server</li>
-            <li>Virtualisation : Proxmox, Virtual Box, VMware Workstation, vSphere ESXi</li>
-            <li>Mise en place de services collaboratifs et documentaires (GLPI, Wiki)</li>
+            <li>Administration Windows Server, Windows AD, Linux (Debian, Ubuntu)</li>
+            <li>Exploitation de services : Apache, MySQL, DHCP, DNS, PfSense, Wiki</li>
+            <li>Gestion de services collaboratifs (GLPI, Wiki)</li>
+            <li>Scripts : Windows Batch, Unix Shell, PowerShell</li>
           </ul>
         </div>
       </div>
     </div>
+
+    <!-- VIRTUALISATION & HAUTE DISPONIBILITÉ -->
+    <div class="row align-items-start mb-5">
+      <div class="col-auto"><div class="circle bg-warning"></div></div>
+      <div class="col">
+        <div class="competence-card">
+          <h2>Virtualisation & Haute Disponibilité</h2>
+          <ul>
+            <li>Proxmox, VirtualBox, VMware Workstation, ESXi</li>
+            <li>Gestion de conteneurs et machines virtuelles</li>
+            <li>RAID, sauvegardes, déploiement d’images</li>
+            <li>SureBackup, Virtual Lab (Veeam)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- GESTION D’INFRASTRUCTURES -->
+    <div class="row align-items-start mb-5">
+      <div class="col-auto"><div class="circle bg-info"></div></div>
+      <div class="col">
+        <div class="competence-card">
+          <h2>Gestion d’infrastructures & Parc informatique</h2>
+          <ul>
+            <li>Câblage et interconnexion (Cisco, D-Link)</li>
+            <li>Gestion de parc : WSUS, FOG, sauvegardes</li>
+            <li>Gestion d’incidents : GLPI, prise en main à distance</li>
+            <li>Rédaction de procédures techniques</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJETS & MÉTHODOLOGIE -->
+    <div class="row align-items-start mb-5">
+      <div class="col-auto"><div class="circle bg-secondary"></div></div>
+      <div class="col">
+        <div class="competence-card">
+          <h2>Conception & Gestion de projets</h2>
+          <ul>
+            <li>Analyse de cahier des charges</li>
+            <li>Planification de projet</li>
+            <li>Réalisation de schémas réseau</li>
+            <li>Utilisation d’outils : Trello</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- DÉVELOPPEMENT -->
+    <div class="row align-items-start mb-5">
+      <div class="col-auto"><div class="circle bg-dark"></div></div>
+      <div class="col">
+        <div class="competence-card">
+          <h2>Développement & Web</h2>
+          <ul>
+            <li>HTML, CSS, PHP/MySQL</li>
+            <li>Manipulation SQL et gestion des droits</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SAVOIR-FAIRE -->
+    <div class="row align-items-start mb-5">
+      <div class="col-auto"><div class="circle bg-primary"></div></div>
+      <div class="col">
+        <div class="competence-card">
+          <h2>Savoir-faire professionnels</h2>
+          <ul>
+            <li>Installer, configurer, tester, valider, documenter</li>
+            <li>Administrer, sécuriser, sauvegarder, restaurer</li>
+            <li>Analyser, optimiser, migrer, automatiser</li>
+            <li>Maintenir la disponibilité, la performance et la sécurité</li>
+            <li>Diagnostiquer et résoudre les incidents</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ENVIRONNEMENTS & OUTILS -->
+    <div class="row align-items-start mb-5">
+      <div class="col-auto"><div class="circle bg-success"></div></div>
+      <div class="col">
+        <div class="competence-card">
+          <h2>Environnements & Outils maîtrisés</h2>
+          <ul>
+            <li><strong>OS :</strong> Windows Server 2016/2022, Windows 10/11, Debian, Ubuntu, Kali Linux, Samba</li>
+            <li><strong>Logiciels :</strong> Apache, MySQL, SSH, Wireshark, Proxmox, VirtualBox, PacketTracer</li>
+            <li><strong>Matériels :</strong> Switchs Cisco/D-Link, points d’accès WiFi, routeurs Cisco, serveurs Fujitsu</li>
+            <li><strong>Langages :</strong> Shell Unix, PowerShell, PHP, HTML, CSS</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
   </section>
 
+  <!-- FOOTER -->
   <footer class="bg-white text-center py-3">
     <div class="container">
       <p class="mb-0">&copy; 2026 Lucas Chayann. Tous droits réservés.</p>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- SCRIPT NAV ACTIVE -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const currentPage = window.location.pathname.split("/").pop();
       document.querySelectorAll(".nav-link").forEach(link => {
         if (link.getAttribute("href") === currentPage) {
           link.classList.add("active");
-        } else {
-          link.classList.remove("active");
         }
       });
     });
   </script>
+
 </body>
 </html>
-
-
-
-
-
