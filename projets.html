@@ -48,6 +48,7 @@
         <div class="projet-texte flex-grow-1">
           <h2 class="h5">PROJET GELTRAM</h2>
           <p>Conception et déploiement d’un environnement informatique interne complet pour l’entreprise GELTRAM, incluant l’hébergement d’un site web, la mise en service d’un contrôleur de domaine, ainsi que l’implémentation de services essentiels tels que le DHCP, le DNS, l’annuaire Active Directory et un pare-feu basé sur PfSense.</p>
+
           <div class="d-flex gap-2 mt-2">
             <a href="https://clucasit.wordpress.com/wp-content/uploads/2025/06/sujet-ppe2.pdf" class="btn btn-primary" target="_blank">Voir le Sujet</a>
             <a href="https://clucasit.wordpress.com/wp-content/uploads/2025/06/documentation-infra-geltram1.pdf" class="btn btn-primary" target="_blank">Documentation</a>
@@ -64,7 +65,8 @@
         </div>
         <div class="projet-texte flex-grow-1">
           <h2 class="h5">PROJET FERME RDS</h2>
-          <p>Mise en place d’une infrastructure de bureau à distance en utilisant une ferme RDS (Remote Desktop Services), permettant aux utilisateurs de se connecter à distance à un environnement Windows centralisé, tout en assurant la gestion des accès, des sessions et des performances du système.</p>
+          <p>Mise en place d’une infrastructure de bureau à distance en utilisant une ferme RDS (Remote Desktop Services), permettant aux utilisateurs de se connecter à distance à un environnement Windows centralisé.</p>
+
           <div class="d-flex gap-2 mt-2">
             <a href="https://clucasit.wordpress.com/wp-content/uploads/2025/06/ducoumentation_rds_chayann_lucas-modifier.pdf" class="btn btn-primary" target="_blank">Documentation</a>
           </div>
@@ -76,11 +78,12 @@
     <div class="projet-card">
       <div class="projet-block d-flex flex-column flex-md-row align-items-start">
         <div class="projet-image mb-3 mb-md-0 me-md-4">
-          <img src="https://clucasit.wordpress.com/wp-content/uploads/2026/01/logo-veea-.png" alt="Projet Sauvegarde" style="max-width: 97px; height: auto;" class="img-fluid rounded shadow-sm" />
+          <img src="https://clucasit.wordpress.com/wp-content/uploads/2026/01/logo-veea-.png" alt="Projet Sauvegarde" style="max-width: 97px;" class="img-fluid rounded shadow-sm" />
         </div>
         <div class="projet-texte flex-grow-1">
           <h2 class="h5">PROJET INFRASTRUCTURE DE SAUVEGARDE</h2>
           <p>Mise en place d’un système de Backup, de SureBackup et d’un Virtual Lab avec Veeam Backup & Replication.</p>
+
           <div class="d-flex gap-2 mt-2">
             <a href="Doc.html" class="btn btn-primary" target="_blank">Documentation</a>
           </div>
@@ -96,7 +99,8 @@
         </div>
         <div class="projet-texte flex-grow-1">
           <h2 class="h5">AP Semestre 3A - GSB</h2>
-          <p>Déployer un serveur web HTTPS/SSL en DMZ connecté à une BDD administrable. Répliquer AD, DHCP, DNS pour redondance. Tester la résilience aux attaques externes via OPNsense et IPAM pour adressage. Mettre en place sauvegardes NAS et procédures documentées.</p>
+          <p>Déployer un serveur web HTTPS/SSL en DMZ connecté à une BDD administrable. Répliquer AD, DHCP, DNS pour redondance. Tester la résilience aux attaques externes via OPNsense.</p>
+
           <div class="d-flex gap-2 mt-2">
             <a href="https://clucasit.wordpress.com/wp-content/uploads/2026/01/ap-semestre-3-projet-a-dmz-et-haute-disponibilite.pdf" class="btn btn-primary" target="_blank">Voir le Sujet</a>
           </div>
@@ -112,6 +116,35 @@
         </div>
         <div class="projet-texte flex-grow-1">
           <h2 class="h5">AP Semestre 3B - GSB</h2>
-          <p>Ajouter répartition de charge (load balancer) sur cluster web et scripts PowerShell pour déploiement/utilisateurs AD. Centraliser logs (serveur + SIEM) et superviser via outil dédié (Zabbix). Déployer IPS pour blocage trafic malveillant et maintenir DNS sur serveurs AD répliqués.</p>
+          <p>Ajouter répartition de charge (load balancer), centraliser les logs (serveur + SIEM), superviser via Zabbix et déployer un IPS pour bloquer le trafic malveillant.</p>
+
           <div class="d-flex gap-2 mt-2">
-            <a href="https://clucasit.wordpress.com/wp-content/uploads/2026/01/ap-semestre-3
+            <a href="https://clucasit.wordpress.com/wp-content/uploads/2026/01/ap-semestre-3-projet-b-amelioration-de-linfrastructure-gsb.pdf" class="btn btn-primary" target="_blank">Voir le Sujet</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-white text-center py-3">
+    <div class="container">
+      <p class="mb-0">&copy; 2026 Lucas Chayann. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPT : surlignage automatique -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const currentPage = window.location.pathname.split("/").pop();
+      document.querySelectorAll(".nav-link").forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
