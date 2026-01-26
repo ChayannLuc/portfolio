@@ -10,8 +10,11 @@
 </head>
 
 <body class="bg-light">
-  
-  
+
+  <!-- ZONE EASTER EGG (invisible) -->
+  <div id="easter-egg-zone"></div>
+
+  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
     <div class="container">
       <a class="navbar-brand" href="index.html">Chayann Lucas</a>
@@ -26,7 +29,7 @@
           <li class="nav-item"><a class="nav-link" href="certification.html">Certifications</a></li>
           <li class="nav-item"><a class="nav-link" href="competences.html">Compétences</a></li>
           <li class="nav-item"><a class="nav-link" href="stages.html">Stages</a></li>
-          <li class="nav-item"><a class="nav-link" href="Veille.html">Veille</a></li>
+          <li class="nav-item"><a class="nav-link active" href="Veille.html">Veille</a></li>
           <li class="nav-item"><a class="nav-link" href="projets.html">Projets</a></li>
           <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
           <li class="nav-item ms-2 ms-lg-4"><a class="btn btn-doc" href="Doc.html">Docs</a></li>
@@ -35,15 +38,15 @@
     </div>
   </nav>
 
-  
+  <!-- TITRE -->
   <div class="section-title">VEILLE TECHNOLOGIQUE</div>
 
-  
+  <!-- CONTENU -->
   <section class="container py-5">
 
     <h1 class="mb-4 text-left">Ma Veille Technologique</h1>
 
-    
+    <!-- COMMENT JE FAIS MA VEILLE -->
     <div class="competence-card mb-5">
       <h2>Comment je réalise ma veille</h2>
       <p>
@@ -66,7 +69,7 @@
       </p>
     </div>
 
-    
+    <!-- CHAÎNES YOUTUBE -->
     <div class="competence-card mb-5">
       <h2>Chaînes YouTube que je suis</h2>
       <ul>
@@ -79,7 +82,7 @@
       <p>Ces chaînes me permettent de rester à jour tout en pratiquant grâce à des démonstrations concrètes.</p>
     </div>
 
-    
+    <!-- BLOGS -->
     <div class="competence-card mb-5">
       <h2>Blogs et sites spécialisés</h2>
       <ul>
@@ -92,26 +95,23 @@
       <p>Ces sources m’aident à comprendre les enjeux actuels et les nouvelles menaces.</p>
     </div>
 
-    
+    <!-- OUTILS -->
     <div class="competence-card mb-5">
       <h2>Outils que j’utilise</h2>
       <ul>
         <li><strong>Feedly</strong> – agrégateur de flux RSS</li>
-        <li><strong>Google Alerts</strong> – alertes sur des mots-clés (cybersécurité, Veeam, virtualisation…)</li>
+        <li><strong>Google Alerts</strong> – alertes sur des mots-clés</li>
         <li><strong>LinkedIn</strong> – suivi de professionnels du secteur</li>
         <li><strong>GitHub Trending</strong> – projets populaires et technologies émergentes</li>
       </ul>
     </div>
 
-    
+    <!-- OBJECTIFS -->
     <div class="competence-card">
       <h2>Objectifs de ma veille</h2>
-      <p>
-        Ma veille technologique a pour but de :
-      </p>
       <ul>
         <li>Développer mes compétences en cybersécurité, réseaux et systèmes</li>
-        <li>Suivre les évolutions des outils que j’utilise (Veeam, Proxmox, Windows Server…)</li>
+        <li>Suivre les évolutions des outils que j’utilise</li>
         <li>Identifier les nouvelles tendances technologiques</li>
         <li>Améliorer mes projets personnels et professionnels</li>
         <li>Rester compétitif dans le domaine de l’IT</li>
@@ -120,14 +120,14 @@
 
   </section>
 
-  
+  <!-- FOOTER -->
   <footer class="bg-white text-center py-3">
     <div class="container">
       <p class="mb-0">&copy; 2026 Lucas Chayann. Tous droits réservés.</p>
     </div>
   </footer>
 
-  
+  <!-- SCRIPT NAV ACTIVE -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const currentPage = window.location.pathname.split("/").pop();
@@ -136,6 +136,13 @@
           link.classList.add("active");
         }
       });
+    });
+  </script>
+
+  <!-- SCRIPT MODE HACKER -->
+  <script>
+    document.getElementById("easter-egg-zone").addEventListener("click", function () {
+      document.body.classList.toggle("hacker-mode");
     });
   </script>
 
