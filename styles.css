@@ -427,9 +427,6 @@ h1 {
   color: #0d47a1;
 }
 
-/* ========================= */
-/* MODE HACKER (EASTER EGG) */
-/* ========================= */
 
 .hacker-mode {
   background-color: black !important;
@@ -442,17 +439,18 @@ h1 {
   border-color: red !important;
 }
 
-/* Zone cliquable en bas à gauche */
+
 #easter-egg-zone {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 45px;
   height: 45px;
-  opacity: 0; /* invisible */
+  opacity: 0; 
   cursor: pointer;
   z-index: 99999;
 }
+
 
 
 
