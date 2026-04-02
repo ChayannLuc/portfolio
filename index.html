@@ -4,21 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>À propos - Chayann Lucas</title>
-
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .competence-card ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .competence-card ul li {
+      margin-bottom: 0.5rem;
+    }
+  </style>
 </head>
-
 <body class="index-page">
-
-
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
     <div class="container">
       <a class="navbar-brand" href="index.html">Chayann Lucas</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
@@ -34,63 +38,41 @@
       </div>
     </div>
   </nav>
-
-
   <section class="container text-center" style="padding-top: 120px; max-width: 800px;">
-
     <img 
       src="https://clucasit.wordpress.com/wp-content/uploads/2025/06/student-8732859_1280-removebg-preview-1.png" 
       alt="Portrait Chayann" 
       class="img-fluid rounded-circle portrait-hover mb-4"
       style="max-width: 220px;"
     />
-
     <h1 class="mb-4">À propos de moi</h1>
-
     <div class="competence-card text-start">
-
       <p>
-        👋 Bonjour, je m'appelle <strong>Chayann LUCAS</strong> et je vous souhaite la bienvenue sur mon portfolio professionnel.
+        👋 Bonjour, je m'appelle <strong>Chayann LUCAS</strong>, bienvenue sur mon portfolio !
       </p>
-
-      <p>
-        Je suis actuellement étudiant en <strong>BTS SIO option SISR</strong> au lycée 
-        <a href="https://lycee-ledantec.fr/">Félix Le Dantec</a> à Lannion. 
-        Je suis passionné par les <strong>systèmes</strong>, les <strong>réseaux</strong> et les 
-        <strong>infrastructures informatiques</strong>.
-      </p>
-
-      <p>
-        À travers ce site, vous pourrez découvrir mon <strong>parcours</strong>, mes 
-        <strong>certifications</strong>, ainsi que différents <strong>projets informatiques</strong> 
-        que j’ai réalisés au cours de mes études et expériences professionnelles.
-      </p>
-
-      <p>
-        Mon objectif est simple : <strong>apprendre en continu</strong>, développer mes compétences 
-        et progresser dans un domaine qui me motive chaque jour 💻
-        <a href="https://www.toutatice.fr/portail" class="easter-egg" title="🤫">✨</a>
-      </p>
-
-     
+      <ul>
+        <li>🎓 Étudiant en <strong>BTS SIO option SISR</strong> au lycée 
+          <a href="https://lycee-ledantec.fr/">Félix Le Dantec</a> (Lannion)</li>
+        <li>🔧 Passionné par les <strong>systèmes</strong>, les <strong>réseaux</strong> et les 
+          <strong>infrastructures informatiques</strong></li>
+        <li>📂 Retrouvez ici mon <strong>parcours</strong>, mes <strong>certifications</strong> 
+          et mes <strong>projets</strong></li>
+        <li>🎯 Objectif : <strong>apprendre en continu</strong> et progresser chaque jour 💻
+          <a href="https://www.toutatice.fr/portail" class="easter-egg" title="🤫">✨</a>
+        </li>
+      </ul>
       <div class="text-center mt-4">
         <a href="https://clucasit.wordpress.com/wp-content/uploads/2026/02/img_1497.png" class="btn btn-doc" download target="_blank">
           Télécharger mon CV
         </a>
       </div>
-
     </div>
-
   </section>
-
-
   <footer class="bg-white text-center py-3 mt-5">
     <div class="container">
       <p class="mb-0">&copy; 2026 Lucas Chayann. Tous droits réservés.</p>
     </div>
   </footer>
-
-
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const currentPage = window.location.pathname.split("/").pop();
@@ -101,7 +83,5 @@
       });
     });
   </script>
-
 </body>
 </html>
-
