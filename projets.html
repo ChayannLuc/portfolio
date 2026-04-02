@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="styles.css" />
 
   <style>
-    
     .projet-img {
       width: 120px;
       height: 120px;
@@ -19,19 +18,79 @@
       padding: 10px;
       border: 1px solid #ddd;
     }
+
+    .projet-card h3 {
+      font-size: 1rem;
+      margin-top: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: #2563eb;
+    }
+
+    .projet-points {
+      padding-left: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .projet-points li {
+      margin-bottom: 0.3rem;
+      font-size: 0.95em;
+    }
+
+    .schema-img-wrapper {
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+    .schema-img {
+      max-width: 100%;
+      max-height: 300px;
+      border-radius: 8px;
+      cursor: pointer;
+      border: 1px solid #ddd;
+      transition: transform 0.2s;
+    }
+
+    .schema-img:hover {
+      transform: scale(1.02);
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px; right: 30px;
+      font-size: 2.5rem;
+      color: white;
+      cursor: pointer;
+      z-index: 10000;
+    }
   </style>
 </head>
 
 <body class="bg-light">
 
-  
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
     <div class="container">
       <a class="navbar-brand" href="index.html">Chayann Lucas</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
@@ -48,122 +107,180 @@
     </div>
   </nav>
 
-  
   <section class="projets-section container py-5 mt-5">
     <h1 class="titre-projets">PROJETS PÉDAGOGIQUES</h1>
     <hr class="barre-separation" />
 
-        <div class="projet-card">
-      <div class="projet-block d-flex flex-column flex-md-row align-items-start">
-
-        <div class="projet-image mb-3 mb-md-0 me-md-4">
-          <img src="https://clucasit.wordpress.com/wp-content/uploads/2025/06/geltram-logo-.png" class="projet-img" alt="Projet GELTRAM">
-        </div>
-
-        <div class="projet-texte flex-grow-1">
-          <h2 class="h5">PROJET GELTRAM</h2>
-          <p>Conception et déploiement d’un environnement informatique interne complet pour l’entreprise GELTRAM, incluant un site web, un contrôleur de domaine, DHCP, DNS, Active Directory et un pare-feu PfSense.</p>
-
-          <div class="d-flex gap-2 mt-2">
-            <a href="https://clucasit.wordpress.com/wp-content/uploads/2025/06/sujet-ppe2.pdf" class="btn btn-primary" target="_blank">Voir le Sujet</a>
-            <a href="https://clucasit.wordpress.com/wp-content/uploads/2025/06/documentation-infra-geltram1.pdf" class="btn btn-primary" target="_blank">Documentation</a>
+    <!-- Projet GELTRAM -->
+    <div class="projet-card">
+      <div class="projet-block">
+        <div class="d-flex flex-column flex-md-row align-items-start mb-3">
+          <div class="projet-image mb-3 mb-md-0 me-md-4">
+            <img src="https://clucasit.wordpress.com/wp-content/uploads/2025/06/geltram-logo-.png" class="projet-img" alt="Projet GELTRAM">
+          </div>
+          <div class="projet-texte flex-grow-1">
+            <h2 class="h5">PROJET GELTRAM</h2>
+            <p>
+              <b>Contexte :</b> Conception et déploiement d'un environnement informatique interne complet pour l'entreprise fictive GELTRAM.<br>
+              <b>Objectifs :</b> Hébergement d'un site web, mise en place d'un contrôleur de domaine, DHCP, DNS, Active Directory et sécurisation via PfSense.
+            </p>
           </div>
         </div>
 
+        <h3>Points clés</h3>
+        <ul class="projet-points">
+          <li>Déploiement d'un contrôleur de domaine Active Directory</li>
+          <li>Configuration des services DHCP et DNS</li>
+          <li>Hébergement d'un site web interne</li>
+          <li>Sécurisation du réseau via pare-feu PfSense</li>
+          <li>Documentation complète de l'infrastructure</li>
+        </ul>
+
+        <div class="d-flex gap-2 mt-3">
+          <a href="https://clucasit.wordpress.com/wp-content/uploads/2025/06/sujet-ppe2.pdf" class="btn btn-primary" target="_blank">Voir le Sujet</a>
+          <a href="https://clucasit.wordpress.com/wp-content/uploads/2025/06/documentation-infra-geltram1.pdf" class="btn btn-primary" target="_blank">Documentation</a>
+        </div>
       </div>
     </div>
 
-    
+    <!-- Projet Ferme RDS -->
     <div class="projet-card">
-      <div class="projet-block d-flex flex-column flex-md-row align-items-start">
-
-        <div class="projet-image mb-3 mb-md-0 me-md-4">
-          <img src="https://clucasit.wordpress.com/wp-content/uploads/2025/06/rds-logo-.png" class="projet-img" alt="Projet RDS">
-        </div>
-
-        <div class="projet-texte flex-grow-1">
-          <h2 class="h5">PROJET FERME RDS</h2>
-          <p>Mise en place d’une infrastructure de bureau à distance via une ferme RDS, permettant aux utilisateurs d’accéder à un environnement Windows centralisé.</p>
-
-          <div class="d-flex gap-2 mt-2">
-            <a href="https://clucasit.wordpress.com/wp-content/uploads/2025/06/ducoumentation_rds_chayann_lucas-modifier.pdf" class="btn btn-primary" target="_blank">Documentation</a>
+      <div class="projet-block">
+        <div class="d-flex flex-column flex-md-row align-items-start mb-3">
+          <div class="projet-image mb-3 mb-md-0 me-md-4">
+            <img src="https://clucasit.wordpress.com/wp-content/uploads/2025/06/rds-logo-.png" class="projet-img" alt="Projet RDS">
+          </div>
+          <div class="projet-texte flex-grow-1">
+            <h2 class="h5">PROJET FERME RDS</h2>
+            <p>
+              <b>Contexte :</b> Mise en place d'une infrastructure de bureau à distance via une ferme RDS.<br>
+              <b>Objectifs :</b> Permettre aux utilisateurs d'accéder à un environnement Windows centralisé de manière sécurisée et performante.
+            </p>
           </div>
         </div>
 
+        <h3>Points clés</h3>
+        <ul class="projet-points">
+          <li>Déploiement d'une ferme RDS (Session Host, Broker, Gateway)</li>
+          <li>Accès centralisé à un bureau Windows distant</li>
+          <li>Gestion des collections de sessions et des utilisateurs</li>
+          <li>Sécurisation des connexions distantes</li>
+        </ul>
+
+        <div class="d-flex gap-2 mt-3">
+          <a href="https://clucasit.wordpress.com/wp-content/uploads/2025/06/ducoumentation_rds_chayann_lucas-modifier.pdf" class="btn btn-primary" target="_blank">Documentation</a>
+        </div>
       </div>
     </div>
 
-    
+    <!-- Projet Sauvegarde -->
     <div class="projet-card">
-      <div class="projet-block d-flex flex-column flex-md-row align-items-start">
-
-        <div class="projet-image mb-3 mb-md-0 me-md-4">
-          <img src="https://clucasit.wordpress.com/wp-content/uploads/2026/01/logo-veea-.png" class="projet-img" alt="Projet Sauvegarde">
-        </div>
-
-        <div class="projet-texte flex-grow-1">
-          <h2 class="h5">PROJET INFRASTRUCTURE DE SAUVEGARDE</h2>
-          <p>Mise en place d’un système de sauvegarde complet avec Veeam Backup & Replication, SureBackup et Virtual Lab.</p>
-
-          <div class="d-flex gap-2 mt-2">
-            <a href="Doc.html" class="btn btn-primary" target="_blank">Documentation</a>
+      <div class="projet-block">
+        <div class="d-flex flex-column flex-md-row align-items-start mb-3">
+          <div class="projet-image mb-3 mb-md-0 me-md-4">
+            <img src="https://clucasit.wordpress.com/wp-content/uploads/2026/01/logo-veea-.png" class="projet-img" alt="Projet Sauvegarde">
+          </div>
+          <div class="projet-texte flex-grow-1">
+            <h2 class="h5">PROJET INFRASTRUCTURE DE SAUVEGARDE</h2>
+            <p>
+              <b>Contexte :</b> Mise en place d'un système de sauvegarde complet pour garantir la continuité de service.<br>
+              <b>Objectifs :</b> Déployer Veeam Backup & Replication avec SureBackup et Virtual Lab pour des sauvegardes fiables et testées automatiquement.
+            </p>
           </div>
         </div>
 
+        <h3>Points clés</h3>
+        <ul class="projet-points">
+          <li>Déploiement de Veeam Backup & Replication</li>
+          <li>Configuration de SureBackup pour la vérification automatique</li>
+          <li>Mise en place d'un Virtual Lab (environnement de test isolé)</li>
+          <li>Planification et supervision des jobs de sauvegarde</li>
+        </ul>
+
+        <div class="d-flex gap-2 mt-3">
+          <a href="Doc.html" class="btn btn-primary" target="_blank">Documentation</a>
+        </div>
       </div>
     </div>
 
-    
+    <!-- AP Semestre 3A - GSB -->
     <div class="projet-card">
-      <div class="projet-block d-flex flex-column flex-md-row align-items-start">
-
-        <div class="projet-image mb-3 mb-md-0 me-md-3">
-          <img src="https://clucasit.wordpress.com/wp-content/uploads/2026/01/gsb-logo-.png" class="projet-img" alt="Projet GSB 3A">
-        </div>
-
-        <div class="projet-texte flex-grow-1">
-          <h2 class="h5">AP Semestre 3A - GSB</h2>
-          <p>Déploiement d’un serveur web HTTPS/SSL en DMZ, réplication AD/DHCP/DNS, tests de résilience via OPNsense et mise en place de sauvegardes NAS.</p>
-
-          <div class="d-flex gap-2 mt-2">
-            <a href="https://clucasit.wordpress.com/wp-content/uploads/2026/01/ap-semestre-3-projet-a-dmz-et-haute-disponibilite.pdf" class="btn btn-primary" target="_blank">Voir le Sujet</a>
+      <div class="projet-block">
+        <div class="d-flex flex-column flex-md-row align-items-start mb-3">
+          <div class="projet-image mb-3 mb-md-0 me-md-4">
+            <img src="https://clucasit.wordpress.com/wp-content/uploads/2026/01/gsb-logo-.png" class="projet-img" alt="Projet GSB 3A">
+          </div>
+          <div class="projet-texte flex-grow-1">
+            <h2 class="h5">AP SEMESTRE 3A - GSB (Projet A)</h2>
+            <p>
+              <b>Contexte :</b> Le laboratoire GSB dispose d'une application Web critique de gestion des frais. L'infrastructure doit être restructurée pour inclure une DMZ et une tolérance de panne.<br>
+              <b>Objectifs :</b> Réplication des services critiques (AD, DHCP, DNS), répartition base de données / application, et sécurisation via OPNsense.
+            </p>
           </div>
         </div>
 
+        <h3>Points clés</h3>
+        <ul class="projet-points">
+          <li>Haute disponibilité avec réplication AD, DHCP et SQL</li>
+          <li>Création d'une DMZ pour isoler les serveurs Web</li>
+          <li>Sécurité périmétrale et routage inter-VLANs via OPNsense</li>
+          <li>Gestion IPAM et sauvegarde sur NAS</li>
+          <li>Tests de résilience et documentation détaillée</li>
+        </ul>
+
+        <div class="d-flex gap-2 mt-3">
+          <a href="https://clucasit.wordpress.com/wp-content/uploads/2026/01/ap-semestre-3-projet-a-dmz-et-haute-disponibilite.pdf" class="btn btn-primary" target="_blank">Voir le Sujet</a>
+        </div>
       </div>
     </div>
 
-    
+    <!-- AP Semestre 3B - GSB -->
     <div class="projet-card">
-      <div class="projet-block d-flex flex-column flex-md-row align-items-start">
-
-        <div class="projet-image mb-3 mb-md-0 me-md-3">
-          <img src="https://clucasit.wordpress.com/wp-content/uploads/2026/01/gsb-logo-.png" class="projet-img" alt="Projet GSB 3B">
-        </div>
-
-        <div class="projet-texte flex-grow-1">
-          <h2 class="h5">AP Semestre 3B - GSB</h2>
-          <p>Ajout d’un load balancer, centralisation des logs (serveur + SIEM), supervision via Zabbix et déploiement d’un IPS.</p>
-
-          <div class="d-flex gap-2 mt-2">
-            <a href="https://clucasit.wordpress.com/wp-content/uploads/2026/01/ap-semestre-3-projet-b-amelioration-de-linfrastructure-gsb.pdf" class="btn btn-primary" target="_blank">Voir le Sujet</a>
+      <div class="projet-block">
+        <div class="d-flex flex-column flex-md-row align-items-start mb-3">
+          <div class="projet-image mb-3 mb-md-0 me-md-4">
+            <img src="https://clucasit.wordpress.com/wp-content/uploads/2026/01/gsb-logo-.png" class="projet-img" alt="Projet GSB 3B">
+          </div>
+          <div class="projet-texte flex-grow-1">
+            <h2 class="h5">AP SEMESTRE 3B - GSB (Projet B)</h2>
+            <p>
+              <b>Contexte :</b> Suite au projet A, la DSI souhaite renforcer la sécurité, l'automatisation et la supervision globale du système.<br>
+              <b>Objectifs :</b> Défense en profondeur, répartition de charge, automatisation PowerShell et déploiement SIEM/IPS.
+            </p>
           </div>
         </div>
 
+        <h3>Points clés</h3>
+        <ul class="projet-points">
+          <li>Load balancer pour le cluster Web</li>
+          <li>Centralisation des logs et déploiement d'un SIEM</li>
+          <li>Supervision proactive via Zabbix</li>
+          <li>Détection d'intrusions avec IPS</li>
+          <li>Automatisation via scripts PowerShell</li>
+        </ul>
+
+        <div class="d-flex gap-2 mt-3">
+          <a href="https://clucasit.wordpress.com/wp-content/uploads/2026/01/ap-semestre-3-projet-b-amelioration-de-linfrastructure-gsb.pdf" class="btn btn-primary" target="_blank">Voir le Sujet</a>
+        </div>
       </div>
     </div>
 
   </section>
 
-  
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="Image projet" />
+  </div>
+
   <footer class="bg-white text-center py-3">
     <div class="container">
       <p class="mb-0">&copy; 2026 Lucas Chayann. Tous droits réservés.</p>
     </div>
   </footer>
 
-  
   <script>
+    // Nav active
     document.addEventListener("DOMContentLoaded", function () {
       const currentPage = window.location.pathname.split("/").pop();
       document.querySelectorAll(".nav-link").forEach(link => {
@@ -172,8 +289,27 @@
         }
       });
     });
+
+    // Lightbox
+    function openLightbox(img) {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(e) {
+      if (e && e.target && !e.target.classList.contains('lightbox') && !e.target.classList.contains('lightbox-close')) return;
+      document.getElementById('lightbox').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === "Escape") closeLightbox({ target: { classList: ['lightbox'] } });
+    });
   </script>
 
 </body>
 </html>
-
