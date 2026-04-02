@@ -43,7 +43,7 @@
 
     .schema-img {
       max-width: 100%;
-      max-height: 300px;
+      max-height: 350px;
       border-radius: 8px;
       cursor: pointer;
       border: 1px solid #ddd;
@@ -111,30 +111,58 @@
     <h1 class="titre-projets">PROJETS PÉDAGOGIQUES</h1>
     <hr class="barre-separation" />
 
-    <!-- Projet GELTRAM -->
+    <!-- ===================== PROJET EGNARO ===================== -->
+    <div class="projet-card">
+      <div class="projet-block">
+        <h2 class="h5">PROJET EGNARO</h2>
+        <p>
+          <b>Contexte :</b> Réalisation d'une architecture réseau et système sécurisée pour l'entreprise fictive Egnaro.<br>
+          <b>Objectifs :</b> Hébergement local d'un site web vitrine, gestion des accès, segmentation réseau, sécurité des OS et supervision.
+        </p>
+
+        <h3>Points clés</h3>
+        <ul class="projet-points">
+          <li>Conception réseau (plan d'adressage, routage NAT, DHCP)</li>
+          <li>Déploiement d'un serveur Web, DNS dédié et serveur RDP (XFCE)</li>
+          <li>Segmentation en zones : Administration, Développeurs, Clients</li>
+          <li>Supervision de la disponibilité du site web</li>
+        </ul>
+
+        <h3>Schéma du projet</h3>
+        <div class="schema-img-wrapper">
+          <img src="images/schema-egnaro.png" alt="Schéma du projet Egnaro" class="schema-img" onclick="openLightbox(this)">
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== PROJET GELTRAM ===================== -->
     <div class="projet-card">
       <div class="projet-block">
         <div class="d-flex flex-column flex-md-row align-items-start mb-3">
           <div class="projet-image mb-3 mb-md-0 me-md-4">
-            <img src="https://clucasit.wordpress.com/wp-content/uploads/2025/06/geltram-logo-.png" class="projet-img" alt="Projet GELTRAM">
+            <img src="https://clucasit.wordpress.com/wp-content/uploads/2025/06/geltram-logo-.png" class="projet-img" alt="Logo GELTRAM">
           </div>
           <div class="projet-texte flex-grow-1">
             <h2 class="h5">PROJET GELTRAM</h2>
             <p>
               <b>Contexte :</b> Conception et déploiement d'un environnement informatique interne complet pour l'entreprise fictive GELTRAM.<br>
-              <b>Objectifs :</b> Hébergement d'un site web, mise en place d'un contrôleur de domaine, DHCP, DNS, Active Directory et sécurisation via PfSense.
+              <b>Objectifs :</b> Site web en DMZ, contrôleur de domaine AD, DHCP, DNS, sécurisation via PfSense + Snort, sauvegardes et honeypot.
             </p>
           </div>
         </div>
 
         <h3>Points clés</h3>
         <ul class="projet-points">
-          <li>Déploiement d'un contrôleur de domaine Active Directory</li>
-          <li>Configuration des services DHCP et DNS</li>
-          <li>Hébergement d'un site web interne</li>
-          <li>Sécurisation du réseau via pare-feu PfSense</li>
-          <li>Documentation complète de l'infrastructure</li>
+          <li>Segmentation réseau : DMZ, LAN Serveurs, LAN Clients, LAN Sauvegarde</li>
+          <li>Serveur AD/DNS/DHCP, GLPI, Wiki, FOG, WSUS</li>
+          <li>Sécurité : PfSense + Snort, Honeypot</li>
+          <li>Sauvegarde via Proxmox Backup Server + NAS</li>
         </ul>
+
+        <h3>Schéma du projet</h3>
+        <div class="schema-img-wrapper">
+          <img src="images/schema-geltram.png" alt="Schéma du projet GELTRAM" class="schema-img" onclick="openLightbox(this)">
+        </div>
 
         <div class="d-flex gap-2 mt-3">
           <a href="https://clucasit.wordpress.com/wp-content/uploads/2025/06/sujet-ppe2.pdf" class="btn btn-primary" target="_blank">Voir le Sujet</a>
@@ -143,29 +171,34 @@
       </div>
     </div>
 
-    <!-- Projet Ferme RDS -->
+    <!-- ===================== PROJET FERME RDS ===================== -->
     <div class="projet-card">
       <div class="projet-block">
         <div class="d-flex flex-column flex-md-row align-items-start mb-3">
           <div class="projet-image mb-3 mb-md-0 me-md-4">
-            <img src="https://clucasit.wordpress.com/wp-content/uploads/2025/06/rds-logo-.png" class="projet-img" alt="Projet RDS">
+            <img src="https://clucasit.wordpress.com/wp-content/uploads/2025/06/rds-logo-.png" class="projet-img" alt="Logo RDS">
           </div>
           <div class="projet-texte flex-grow-1">
             <h2 class="h5">PROJET FERME RDS</h2>
             <p>
-              <b>Contexte :</b> Mise en place d'une infrastructure de bureau à distance via une ferme RDS.<br>
-              <b>Objectifs :</b> Permettre aux utilisateurs d'accéder à un environnement Windows centralisé de manière sécurisée et performante.
+              <b>Contexte :</b> Mise en place d'une infrastructure de bureau à distance via une ferme RDS chez Hutchinson.<br>
+              <b>Objectifs :</b> Permettre aux utilisateurs d'accéder à un environnement Windows centralisé via RDP avec profils itinérants.
             </p>
           </div>
         </div>
 
         <h3>Points clés</h3>
         <ul class="projet-points">
-          <li>Déploiement d'une ferme RDS (Session Host, Broker, Gateway)</li>
-          <li>Accès centralisé à un bureau Windows distant</li>
-          <li>Gestion des collections de sessions et des utilisateurs</li>
-          <li>Sécurisation des connexions distantes</li>
+          <li>Collection de sessions RDS (3 Session Hosts)</li>
+          <li>RD Connection Broker pour la répartition des connexions</li>
+          <li>User Profile Disks (VHDX) sur serveur dédié</li>
+          <li>Connexion RDP via FQDN DNS de la collection</li>
         </ul>
+
+        <h3>Schéma du projet</h3>
+        <div class="schema-img-wrapper">
+          <img src="images/schema-rds.png" alt="Schéma du projet Ferme RDS" class="schema-img" onclick="openLightbox(this)">
+        </div>
 
         <div class="d-flex gap-2 mt-3">
           <a href="https://clucasit.wordpress.com/wp-content/uploads/2025/06/ducoumentation_rds_chayann_lucas-modifier.pdf" class="btn btn-primary" target="_blank">Documentation</a>
@@ -173,12 +206,12 @@
       </div>
     </div>
 
-    <!-- Projet Sauvegarde -->
+    <!-- ===================== PROJET SAUVEGARDE ===================== -->
     <div class="projet-card">
       <div class="projet-block">
         <div class="d-flex flex-column flex-md-row align-items-start mb-3">
           <div class="projet-image mb-3 mb-md-0 me-md-4">
-            <img src="https://clucasit.wordpress.com/wp-content/uploads/2026/01/logo-veea-.png" class="projet-img" alt="Projet Sauvegarde">
+            <img src="https://clucasit.wordpress.com/wp-content/uploads/2026/01/logo-veea-.png" class="projet-img" alt="Logo Veeam">
           </div>
           <div class="projet-texte flex-grow-1">
             <h2 class="h5">PROJET INFRASTRUCTURE DE SAUVEGARDE</h2>
@@ -203,30 +236,34 @@
       </div>
     </div>
 
-    <!-- AP Semestre 3A - GSB -->
+    <!-- ===================== AP SEMESTRE 3A - GSB ===================== -->
     <div class="projet-card">
       <div class="projet-block">
         <div class="d-flex flex-column flex-md-row align-items-start mb-3">
           <div class="projet-image mb-3 mb-md-0 me-md-4">
-            <img src="https://clucasit.wordpress.com/wp-content/uploads/2026/01/gsb-logo-.png" class="projet-img" alt="Projet GSB 3A">
+            <img src="https://clucasit.wordpress.com/wp-content/uploads/2026/01/gsb-logo-.png" class="projet-img" alt="Logo GSB">
           </div>
           <div class="projet-texte flex-grow-1">
             <h2 class="h5">AP SEMESTRE 3A - GSB (Projet A)</h2>
             <p>
-              <b>Contexte :</b> Le laboratoire GSB dispose d'une application Web critique de gestion des frais. L'infrastructure doit être restructurée pour inclure une DMZ et une tolérance de panne.<br>
-              <b>Objectifs :</b> Réplication des services critiques (AD, DHCP, DNS), répartition base de données / application, et sécurisation via OPNsense.
+              <b>Contexte :</b> Le laboratoire GSB dispose d'une application Web critique. L'infrastructure doit être restructurée pour inclure une DMZ et une tolérance de panne.<br>
+              <b>Objectifs :</b> Réplication des services critiques (AD, DHCP, DNS, SQL), DMZ pour les serveurs Web, sécurisation via OPNsense.
             </p>
           </div>
         </div>
 
         <h3>Points clés</h3>
         <ul class="projet-points">
-          <li>Haute disponibilité avec réplication AD, DHCP et SQL</li>
-          <li>Création d'une DMZ pour isoler les serveurs Web</li>
-          <li>Sécurité périmétrale et routage inter-VLANs via OPNsense</li>
-          <li>Gestion IPAM et sauvegarde sur NAS</li>
-          <li>Tests de résilience et documentation détaillée</li>
+          <li>Haute disponibilité : réplication AD1/AD2, DHCP, DNS, SQL1/SQL2</li>
+          <li>VLAN 200 - DMZ avec cluster Web (SRV WEB1/WEB2)</li>
+          <li>Routeur pare-feu OPNsense (routage inter-VLANs)</li>
+          <li>Gestion IPAM, GLPI, et sauvegarde distante sur NAS</li>
         </ul>
+
+        <h3>Schéma du projet</h3>
+        <div class="schema-img-wrapper">
+          <img src="images/schema-gsb-3a.png" alt="Schéma AP Semestre 3A GSB" class="schema-img" onclick="openLightbox(this)">
+        </div>
 
         <div class="d-flex gap-2 mt-3">
           <a href="https://clucasit.wordpress.com/wp-content/uploads/2026/01/ap-semestre-3-projet-a-dmz-et-haute-disponibilite.pdf" class="btn btn-primary" target="_blank">Voir le Sujet</a>
@@ -234,33 +271,69 @@
       </div>
     </div>
 
-    <!-- AP Semestre 3B - GSB -->
+    <!-- ===================== AP SEMESTRE 3B - GSB ===================== -->
     <div class="projet-card">
       <div class="projet-block">
         <div class="d-flex flex-column flex-md-row align-items-start mb-3">
           <div class="projet-image mb-3 mb-md-0 me-md-4">
-            <img src="https://clucasit.wordpress.com/wp-content/uploads/2026/01/gsb-logo-.png" class="projet-img" alt="Projet GSB 3B">
+            <img src="https://clucasit.wordpress.com/wp-content/uploads/2026/01/gsb-logo-.png" class="projet-img" alt="Logo GSB">
           </div>
           <div class="projet-texte flex-grow-1">
             <h2 class="h5">AP SEMESTRE 3B - GSB (Projet B)</h2>
             <p>
-              <b>Contexte :</b> Suite au projet A, la DSI souhaite renforcer la sécurité, l'automatisation et la supervision globale du système.<br>
-              <b>Objectifs :</b> Défense en profondeur, répartition de charge, automatisation PowerShell et déploiement SIEM/IPS.
+              <b>Contexte :</b> Suite au projet A, la DSI souhaite renforcer la sécurité, l'automatisation et la supervision.<br>
+              <b>Objectifs :</b> Défense en profondeur (double pare-feu Stormshield + OPNsense), load balancing, SIEM, IPS et supervision.
             </p>
           </div>
         </div>
 
         <h3>Points clés</h3>
         <ul class="projet-points">
-          <li>Load balancer pour le cluster Web</li>
-          <li>Centralisation des logs et déploiement d'un SIEM</li>
-          <li>Supervision proactive via Zabbix</li>
-          <li>Détection d'intrusions avec IPS</li>
-          <li>Automatisation via scripts PowerShell</li>
+          <li>Double pare-feu : Stormshield SNS210W (Nord-Sud) + OPNsense (Est-Ouest)</li>
+          <li>Proxy / Reverse Proxy / Load Balancer en DMZ externe</li>
+          <li>Centralisation des logs : Graylog + Wazuh (SIEM)</li>
+          <li>Supervision proactive avec Zabbix et serveur de backup</li>
         </ul>
+
+        <h3>Schéma du projet</h3>
+        <div class="schema-img-wrapper">
+          <img src="images/schema-gsb-3b.png" alt="Schéma AP Semestre 3B GSB" class="schema-img" onclick="openLightbox(this)">
+        </div>
 
         <div class="d-flex gap-2 mt-3">
           <a href="https://clucasit.wordpress.com/wp-content/uploads/2026/01/ap-semestre-3-projet-b-amelioration-de-linfrastructure-gsb.pdf" class="btn btn-primary" target="_blank">Voir le Sujet</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== AP SEMESTRE 4 - GSB ===================== -->
+    <div class="projet-card">
+      <div class="projet-block">
+        <div class="d-flex flex-column flex-md-row align-items-start mb-3">
+          <div class="projet-image mb-3 mb-md-0 me-md-4">
+            <img src="https://clucasit.wordpress.com/wp-content/uploads/2026/01/gsb-logo-.png" class="projet-img" alt="Logo GSB">
+          </div>
+          <div class="projet-texte flex-grow-1">
+            <h2 class="h5">AP SEMESTRE 4 - GSB (Projet C)</h2>
+            <p>
+              <b>Contexte :</b> Extension de l'infrastructure GSB avec la création d'un nouveau site à Rennes connecté au siège de Paris.<br>
+              <b>Objectifs :</b> VPN inter-sites (IPSec + OpenVPN), téléphonie IP, messagerie, RADIUS 802.1x, et nouveaux services (WAPT, Bastion).
+            </p>
+          </div>
+        </div>
+
+        <h3>Points clés</h3>
+        <ul class="projet-points">
+          <li>Connectivité VPN IPSec Paris ↔ Rennes + OpenVPN nomade</li>
+          <li>Nouveaux services : serveur Mail, téléphonie VoIP, RADIUS, WAPT</li>
+          <li>Site Rennes : Stormshield, Switch Cisco Catalyst C2960+, VLANs dédiés</li>
+          <li>Serveur Bastion en DMZ, supervision Wazuh/Zabbix/Graylog</li>
+          <li>VLAN Visiteurs avec point d'accès Wi-Fi</li>
+        </ul>
+
+        <h3>Schéma du projet</h3>
+        <div class="schema-img-wrapper">
+          <img src="images/schema-gsb-s4.png" alt="Schéma AP Semestre 4 GSB" class="schema-img" onclick="openLightbox(this)">
         </div>
       </div>
     </div>
